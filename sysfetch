@@ -1,0 +1,30 @@
+#!/bin/bash
+echo ''
+echo '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>     S*****\                /*'
+echo '>>>>>>>>>>>>>>>>>>>>>>>>>>           Y*****\              /*'
+echo '>>>>>>>>>>>>>>>>>>>>>>>>>>            S*****\            /*'
+echo '>>>>>>>>>>>>>>>>>>>>>>>                F*****\          /*'
+echo '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      E*****\        /*'
+echo '>>>>>>>>>>>>>>>>>>>>>>>>>                T*****\      /*'
+echo '>>>>>>>>>>>>>>>>>>>>>                     C*****\    /*'
+echo '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>              H*****\  /*'
+echo '>>>>>>>>>>>>>>>>>>>>>>>>>>                  !*****\/*'
+
+RED='\033[0;31m'
+LGRAY=`tput setaf 5`
+do=`tput setaf 3`
+g=`tput setaf 1`
+
+echo ''
+echo -e "${nc}============================="
+echo -e "${RED}|Kernel : "$(uname -r)
+echo -e "${LGRAY}|Working dir : "$(pwd)
+echo -e "${do}|OS type : "$(echo $OSTYPE)
+echo -e "${g}|"$(hostnamectl | grep "Operating" -a)
+echo -e "${LGRAY}|Current shell : "$(echo $SHELL)
+echo -e "${RED}|Current user : " $(echo $USER)
+echo -e "${do}|Home : " $(echo $HOME)
+echo -e "${LGRAY}|Arch : "$(echo $MACHTYPE )
+echo -e "${g}|Session : "$(echo $XDG_SESSION_DESKTOP)
+echo -e "${LGRAY}|Date : "$(date)
+echo "=============================="
